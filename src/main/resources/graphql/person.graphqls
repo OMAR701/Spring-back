@@ -1,0 +1,14 @@
+type Person {
+    id: ID!,
+    nom: String!,
+    prenom: String!,
+    email: String!,
+    Telephone: String!,
+    password: String!,
+}
+
+type Query {
+    getPersons: [Person]!
+    getPerson(id: Int):Person!
+    personEMAIL(email: String): Person!
+}

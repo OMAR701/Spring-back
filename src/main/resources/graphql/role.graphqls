@@ -1,0 +1,19 @@
+
+type Role {
+    id: ID!
+    name: String!
+}
+
+input RoleDTO{
+    name: String!
+}
+
+
+type Mutation {
+    addRole(roleDTO: RoleDTO!): Role
+}
+
+extend type Query {
+    getRoles: [Role]!
+    getRole(id: Int): Role!
+}

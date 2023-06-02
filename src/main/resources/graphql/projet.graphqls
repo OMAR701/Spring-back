@@ -1,0 +1,21 @@
+type Projet {
+    id: ID!
+    titre: String!
+}
+
+input ProjectDTO{
+    titre: String!
+}
+
+
+extend type Mutation {
+    addProjet(projectDTO: ProjectDTO!): Projet
+    UpdateProjet(projectDTO: ProjectDTO!): Boolean
+    deleteProjet(id: Int):Boolean
+
+}
+
+extend type Query {
+    getProjet: [Projet]!
+    getProject(id: Int): Projet!
+}
