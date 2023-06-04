@@ -21,6 +21,7 @@ public class Person {
     private String email;
     private String Telephone;
     private String password;
+    private String image;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "person_roles", joinColumns = @JoinColumn(name = "person_id", referencedColumnName = "id"),

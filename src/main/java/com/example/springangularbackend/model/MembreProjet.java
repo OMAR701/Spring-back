@@ -14,6 +14,7 @@ public class MembreProjet {
     @EmbeddedId
     private MembreProjetKey id;
 
+    private boolean isRespo;
 
     @ManyToOne
     @MapsId("MembreId")

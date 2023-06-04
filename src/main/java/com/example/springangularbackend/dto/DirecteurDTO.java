@@ -13,4 +13,5 @@ public class DirecteurDTO {
     private String email;
     private String Telephone;
     private String password;
+    private String image;
 }

@@ -2,10 +2,12 @@ package com.example.springangularbackend.graphql;
 
 
 
+import com.example.springangularbackend.dto.PersonDTO;
 import com.example.springangularbackend.model.Person;
 import com.example.springangularbackend.service.impl.PersonServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
+import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
 
@@ -34,4 +36,10 @@ public class PersonGraphQl {
     public List<Person> getPersons() {
         return personService.getAllPersons();
     }
+
+    @MutationMapping
+    public Person addPerson(@Argument PersonDTO personDTO) {
+        return personService.addPerson(personDTO);
+    }
+
 }

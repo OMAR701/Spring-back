@@ -9,6 +9,8 @@ import lombok.Setter;
 @Setter
 public class ProjectDTO {
 
-    int id;
     String titre;
+    String description;
+
+
 }

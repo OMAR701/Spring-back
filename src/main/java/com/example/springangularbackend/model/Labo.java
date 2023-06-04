@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.w3c.dom.Text;
 
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor
@@ -11,8 +12,10 @@ public class Labo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String nom;
+    private int id;
+    private String titre;
+    private String description;
+    private String image;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "etablisment_id", nullable = false)
     private Etablisment etablisment;
