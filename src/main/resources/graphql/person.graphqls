@@ -1,14 +1,28 @@
 type Person {
-    id: ID!,
-    nom: String!,
-    prenom: String!,
-    email: String!,
-    Telephone: String!,
-    password: String!,
+    id: ID!
+    nom: String!
+    prenom: String!
+    email: String!
+    Telephone: String!
+    password: String!
+    image: String!
 }
 
+input PersonDTO{
+    nom: String!
+    prenom: String!
+    email: String!
+    Telephone: String!
+    password: String!
+    image: String!
+
+}
+extend type Mutation{
+    addPerson(personDTO: PersonDTO!):Person
+}
 type Query {
     getPersons: [Person]!
     getPerson(id: Int):Person!
     personEMAIL(email: String): Person!
 }
+

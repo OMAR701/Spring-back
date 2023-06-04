@@ -17,6 +17,7 @@ public class Projet {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String titre;
+    private String description;
 
     @OneToMany(mappedBy = "projet")
     private Set<MembreProjet> membreProjets;

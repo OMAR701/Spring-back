@@ -1,10 +1,12 @@
 type Projet {
     id: ID!
     titre: String!
+    description: String!
 }
 
 input ProjectDTO{
     titre: String!
+    description: String!
 }
 
 

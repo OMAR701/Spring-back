@@ -14,7 +14,6 @@ import java.util.Set;
 @NoArgsConstructor
 public class Membre extends Person{
 
-    private boolean isRespo;
     @OneToMany(mappedBy = "membre")
     private Set<DotationMembre> dotationMembres;
 

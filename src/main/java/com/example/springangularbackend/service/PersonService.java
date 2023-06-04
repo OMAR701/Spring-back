@@ -1,5 +1,6 @@
 package com.example.springangularbackend.service;
 
+import com.example.springangularbackend.dto.PersonDTO;
 import com.example.springangularbackend.model.Person;
 
 import java.util.List;
@@ -10,4 +11,6 @@ public interface PersonService {
     Optional<Person> getPersonById(int id);
 
     public void save(Person person);
+
+    public Person addPerson(PersonDTO personDTO);
 }

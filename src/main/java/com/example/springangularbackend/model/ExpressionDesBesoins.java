@@ -18,8 +18,9 @@ public class ExpressionDesBesoins {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
 
-    private  TypeExpression type;
-    private  String titre;
+    private TypeExpression type;
+    private boolean Status;
+    private String titre;
     private Date Date_de_Demande;
     private Date Date_de_validation_par_Directeur;
     private Date date_effec;

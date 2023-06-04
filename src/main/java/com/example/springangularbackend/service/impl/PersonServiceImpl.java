@@ -1,4 +1,5 @@
 package com.example.springangularbackend.service.impl;
+import com.example.springangularbackend.dto.PersonDTO;
 import com.example.springangularbackend.model.Person;
 
 import com.example.springangularbackend.repository.PersonRepository;
@@ -40,5 +41,17 @@ public class PersonServiceImpl implements PersonService {
     @Override
     public void save(Person person){
         personRepository.save(person);
+    }
+
+    @Override
+    public Person addPerson(PersonDTO personDTO) {
+        Person person = new Person();
+        person.setNom(personDTO.getNom());
+        person.setPrenom(personDTO.getPrenom());
+        person.setEmail(personDTO.getEmail());
+        person.setPassword(personDTO.getPassword());
+        person.setTelephone(personDTO.getTelephone());
+        person.setImage(personDTO.getImage());
+        return personRepository.save(person);
     }
 }

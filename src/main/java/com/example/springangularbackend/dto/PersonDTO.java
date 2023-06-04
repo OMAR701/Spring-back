@@ -5,7 +5,10 @@ import lombok.Data;
 @Data
 public class PersonDTO {
 
-    int id;
-    String nom;
-    String prenom;
+    private String nom;
+    private String prenom;
+    private String email;
+    private String Telephone;
+    private String image;
+    private String password;
 }

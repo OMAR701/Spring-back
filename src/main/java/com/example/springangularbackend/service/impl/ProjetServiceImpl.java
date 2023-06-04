@@ -28,6 +28,7 @@ public class ProjetServiceImpl  implements ProjetService {
 
         Projet projet = new Projet();
         projet.setTitre(projectDTO.getTitre());
+        projet.setDescription(projectDTO.getDescription());
         return projetRepository.save(projet);
     }
 
